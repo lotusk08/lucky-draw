@@ -23,21 +23,21 @@ const prizes = [
   {
     type: 2,
     count: 5,
-    text: "Đại lộc đầu xuân",
+    text: "Tiến xuân Quý Mão",
     title: "500.000",
     img: "../img/lx02.png"
   },
   {
     type: 3,
     count: 30,
-    text: "Thần tài gõ cửa",
+    text: "Nỗi lo tan biến",
     title: "200.000",
     img: "../img/lx03.png"
   },
   {
     type: 4,
     count: 90,
-    text: "May mắn tới nhà",
+    text: "May mắn to to",
     title: "100.000",
     img: "../img/lx04.png"
   },

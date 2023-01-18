@@ -221,12 +221,12 @@ function bindEvent() {
 
     let target = e.target.id;
     switch (target) {
-      // 显示数字墙
+      // Màn hình bắt đầu
       case "welcome":
         switchScreen("enter");
         rotate = false;
         break;
-      // 进入抽奖
+      // Bắt đầu quay - bấm nút
       case "enter":
         removeHighlight();
         addQipao(`Đang tìm chủ nhân của [${currentPrize.title}], đi ra ngoài mất ráng chịu。`);
@@ -234,7 +234,7 @@ function bindEvent() {
         rotate = true;
         switchScreen("lottery");
         break;
-      // Tính năng reset!
+      // Tính năng reset kết quả
       case "reset":
         let doREset = window.confirm(
           "Hey, bạn có chắc muốn reset chứ?. Ai đã trúng giải sẽ bị mất hết đó! Nút sa là gà lên tủ đó!"
@@ -245,7 +245,7 @@ function bindEvent() {
         addQipao("Đã xoá dữ liệu trước đó");
         addHighlight();
         resetCard();
-        // 重置所有数据
+        // Hiển thị
         currentLuckys = [];
         basicData.leftUsers = Object.assign([], basicData.users);
         basicData.luckyUsers = {};
@@ -267,7 +267,7 @@ function bindEvent() {
           // 抽奖
           lottery();
         });
-        addQipao(`Đang tìm chủ nhân của [${currentPrize.title}]`);
+        addQipao(`Đang tìm người trúng [${currentPrize.title}] tiếp theo!`);
         break;
       // 重新抽奖
       case "reLottery":
