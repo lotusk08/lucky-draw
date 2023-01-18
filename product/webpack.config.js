@@ -36,7 +36,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.BannerPlugin("版权所有，翻版必究"),
+    new webpack.BannerPlugin("Marketing TSN - All rights reserved"),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "/src/index.html"),
       filename: "./index.html",

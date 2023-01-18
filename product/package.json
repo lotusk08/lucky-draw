@@ -1,7 +1,7 @@
 {
   "name": "lucky",
   "version": "1.0.0",
-  "description": "抽奖",
+  "description": "Lucky Draw",
   "main": "index.js",
   "scripts": {
     "start": "cd dist && node ../../server/index.js 8888",
@@ -9,7 +9,7 @@
     "build": "webpack --mode=production --progress --colors",
     "dev": "webpack-dev-server --config webpack.dev.js --mode=development --progress --colors"
   },
-  "author": "moshang",
+  "author": "TSN Marketing Department",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.1.0",

@@ -9,7 +9,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "moshang",
+    "author": "TSN Marketing Department",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/moshang-xc/web-server.git"

@@ -49,7 +49,7 @@ app.get("/", (req, res) => {
   res.redirect(301, "index.html");
 });
 
-//设置跨域访问
+//Set cross -domain access
 app.all("*", function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -60,11 +60,11 @@ app.all("*", function(req, res, next) {
 });
 
 app.post("*", (req, res, next) => {
-  log(`请求内容：${JSON.stringify(req.path, 2)}`);
+  log(`request content：${JSON.stringify(req.path, 2)}`);
   next();
 });
 
-// 获取之前设置的数据
+// Get the data previously set up
 router.post("/getTempData", (req, res, next) => {
   getLeftUsers();
   res.json({
@@ -74,11 +74,11 @@ router.post("/getTempData", (req, res, next) => {
   });
 });
 
-// 获取所有用户
+// Get all users
 router.post("/reset", (req, res, next) => {
   luckyData = {};
   errorData = [];
-  log(`重置数据成功`);
+  log(`Reset data successfully`);
   saveErrorDataFile(errorData);
   return saveDataFile(luckyData).then(data => {
     res.json({
@@ -87,83 +87,83 @@ router.post("/reset", (req, res, next) => {
   });
 });
 
-// 获取所有用户
+// Get all users
 router.post("/getUsers", (req, res, next) => {
   res.json(curData.users);
-  log(`成功返回抽奖用户数据`);
+  log(`Successfully return to draw user data`);
 });
 
-// 获取奖品信息
+// Get prize information
 router.post("/getPrizes", (req, res, next) => {
   // res.json(curData.prize);
-  log(`成功返回奖品数据`);
+  log(`Successfully return to prize data`);
 });
 
-// 保存抽奖数据
+// Save the lucky draw data
 router.post("/saveData", (req, res, next) => {
   let data = req.body;
   setLucky(data.type, data.data)
     .then(t => {
       res.json({
-        type: "设置成功！"
+        type: "Successfully set！"
       });
-      log(`保存奖品数据成功`);
+      log(`Successfully preserved prize data data`);
     })
     .catch(data => {
       res.json({
-        type: "设置失败！"
+        type: "Setup failed！"
       });
-      log(`保存奖品数据失败`);
+      log(`Save the prize data failed`);
     });
 });
 
-// 保存抽奖数据
+// Save the Lucky draw data
 router.post("/errorData", (req, res, next) => {
   let data = req.body;
   setErrorData(data.data)
     .then(t => {
       res.json({
-        type: "设置成功！"
+        type: "Successfully set！"
       });
-      log(`保存没来人员数据成功`);
+      log(`The data of the data is successful, the data is successful`);
     })
     .catch(data => {
       res.json({
-        type: "设置失败！"
+        type: "Setup failed！"
       });
-      log(`保存没来人员数据失败`);
+      log(`The data of the person who did not come, the data failed`);
     });
 });
 
-// 保存数据到excel中去
+// Save the data to the excel
 router.post("/export", (req, res, next) => {
   let type = [1, 2, 3, 4, 5, defaultType],
-    outData = [["工号", "姓名", "部门"]];
+    outData = [["Mã nhân sự", "Họ Tên", "Bộ Phận"]];
   cfg.prizes.forEach(item => {
     outData.push([item.text]);
     outData = outData.concat(luckyData[item.type] || []);
   });
 
-  writeXML(outData, "/抽奖结果.xlsx")
+  writeXML(outData, "/Ket qua quay li xi.xlsx")
     .then(dt => {
-      // res.download('/抽奖结果.xlsx');
+      // res.download('/Ket qua quay li xi.xlsx');
       res.status(200).json({
         type: "success",
-        url: "抽奖结果.xlsx"
+        url: "Ket qua quay li xi.xlsx"
       });
-      log(`导出数据成功！`);
+      log(`Export data successfully！`);
     })
     .catch(err => {
       res.json({
         type: "error",
         error: err.error
       });
-      log(`导出数据失败！`);
+      log(`Failed to export data！`);
     });
 });
 
-//对于匹配不到的路径或者请求，返回默认页面
-//区分不同的请求返回不同的页面内容
+//For the unsatisfactory path or request, return to the default page
+//Differential requests return different pages content
 router.all("*", (req, res) => {
   if (req.method.toLowerCase() === "get") {
     if (/\.(html|htm)/.test(req.originalUrl)) {
@@ -204,15 +204,15 @@ function setErrorData(data) {
 app.use(router);
 
 function loadData() {
-  console.log("加载EXCEL数据文件");
+  console.log("Load Excel data file");
   let cfgData = {};
 
   // curData.users = loadXML(path.join(cwd, "data/users.xlsx"));
   curData.users = loadXML(path.join(dataBath, "data/users.xlsx"));
-  // 重新洗牌
+  // reshuffle the card
   shuffle(curData.users);
 
-  // 读取已经抽取的结果
+  // read extracted results
   loadTempData()
     .then(data => {
       luckyData = data[0];
@@ -224,7 +224,7 @@ function loadData() {
 }
 
 function getLeftUsers() {
-  //  记录当前已抽取的用户
+  //  Record the currently extracted users
   let lotteredUser = {};
   for (let key in luckyData) {
     let luckys = luckyData[key];
@@ -232,7 +232,7 @@ function getLeftUsers() {
       lotteredUser[item[0]] = true;
     });
   }
-  // 记录当前已抽取但是不在线人员
+  // Records are currently extracted but not online
   errorData.forEach(item => {
     lotteredUser[item[0]] = true;
   });

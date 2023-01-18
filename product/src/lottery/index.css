@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  background: linear-gradient(to bottom, #131313 0%, #02101c 100%);
+  background: linear-gradient(to bottom, #ff6000 0%, #02101c 100%);
   margin: 0;
   font-family: Helvetica, sans-serif;
   overflow: hidden;
@@ -72,7 +72,7 @@ a {
 
 .element .company {
   position: absolute;
-  top: 1.2vh;
+  top: 0vh;
   right: 0;
   width: 100%;
   font-size: 2vh;
@@ -81,10 +81,10 @@ a {
 
 .element .name {
   position: absolute;
-  top: 4.6vh;
+  top: 4.0vh;
   left: 0;
   right: 0;
-  font-size: 2.9vh;
+  font-size: 1.8vh;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 0 0 1vh rgba(0, 255, 255, 0.95);
@@ -112,7 +112,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(0, 255, 255, 0.5);
+  background-color: rgba(255, 106, 0, 0.5);
 }
 
 button:active {
@@ -121,8 +121,8 @@ button:active {
 }
 
 .highlight {
-  background-color: rgba(253, 105, 0, 0.95) !important;
-  box-shadow: 0 0 12px rgba(253, 105, 0, 0.95);
+  background-color: rgba(253, 0, 0, 0.95) !important;
+  box-shadow: 0 0 12px rgba(253, 0, 0, 0.95);
   border: 1px solid rgba(253, 105, 0, 0.25);
 }
 
@@ -136,8 +136,8 @@ button:active {
 
 .prize.element {
   transition: background-color 1.5s ease-in 0.3s;
-  background-color: rgba(253, 105, 0, 0.85) !important;
-  box-shadow: 0 0 12px rgba(253, 105, 0, 0.95);
+  background-color: rgba(253, 0, 0, 0.95) !important;
+  box-shadow: 0 0 12px rgba(253, 0, 0, 0.95);
 }
 
 .prize .company,
@@ -195,7 +195,7 @@ button:active {
   flex-wrap: nowrap;
   background-color: rgba(0, 127, 127, 0.37);
   border: 1px solid rgba(127, 255, 255, 0.25);
-  color: rgba(127, 255, 255, 0.75);
+  color: rgba(166, 255, 149, 0.75);
   width: 30vh;
   height: 10vh;
   box-sizing: border-box;
@@ -261,7 +261,7 @@ button:active {
 
 .progress-bar-striped {
   background-image: -webkit-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.15) 25%,
+      rgba(251, 62, 62, 0.15) 25%,
       transparent 25%,
       transparent 50%,
       rgba(255, 255, 255, 0.15) 50%,
