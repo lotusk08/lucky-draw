@@ -51,7 +51,7 @@ const prizes = [
 ];
 
 /**
- * 一次抽取的奖品个数与prizes对应
+ * 一Set
  */
 const EACH_COUNT = [10, 1, 1, 10, 10, 10];
 
@@ -60,8 +60,7 @@ const EACH_COUNT = [10, 1, 1, 10, 10, 10];
  */
 const COMPANY = "";
 
-module.exports = {
-  prizes,
+module.exports = {prizes,
   EACH_COUNT,
   COMPANY
 };

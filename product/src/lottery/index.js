@@ -214,7 +214,7 @@ function bindEvent() {
         rotateObj.stop();
         btns.lottery.innerHTML = "Quay lì xì";
       } else {
-        addQipao("May mắn, chậm lại một chút ~~");
+        addQipao("May mắn vẫn đang đợi bạn, bình tĩnh!");
       }
       return false;
     }
@@ -229,20 +229,20 @@ function bindEvent() {
       // 进入抽奖
       case "enter":
         removeHighlight();
-        addQipao(`Immediately extract[${currentPrize.title}],Don't go away。`);
+        addQipao(`Đang tìm chủ nhân của [${currentPrize.title}], đi ra ngoài mất ráng chịu。`);
         // rotate = !rotate;
         rotate = true;
         switchScreen("lottery");
         break;
-      // 重置
+      // Tính năng reset!
       case "reset":
         let doREset = window.confirm(
-          "Do you confirm the resetting data. After the reset, all the current draws have been emptied?"
+          "Hey, bạn có chắc muốn reset chứ?. Ai đã trúng giải sẽ bị mất hết đó! Nút sa là gà lên tủ đó!"
         );
         if (!doREset) {
           return;
         }
-        addQipao("Reset all data, re-draw lottery");
+        addQipao("Đã xoá dữ liệu trước đó");
         addHighlight();
         resetCard();
         // 重置所有数据
@@ -267,7 +267,7 @@ function bindEvent() {
           // 抽奖
           lottery();
         });
-        addQipao(`Extract[${currentPrize.title}],Adjust the pose`);
+        addQipao(`Đang tìm chủ nhân của [${currentPrize.title}]`);
         break;
       // 重新抽奖
       case "reLottery":
@@ -276,7 +276,7 @@ function bindEvent() {
           return;
         }
         setErrorData(currentLuckys);
-        addQipao(`Re -extract[${currentPrize.title}],be prepared`);
+        addQipao(`Đang tìm tìm lại tên của [${currentPrize.title}]`);
         setLotteryStatus(true);
         // 重新抽奖则直接进行抽取，不对上一次的抽奖数据进行保存
         // 抽奖
@@ -293,7 +293,7 @@ function bindEvent() {
             currentLuckys = [];
           });
           exportData();
-          addQipao(`The data has been saved in Excel。`);
+          addQipao(`Danh sách những người trúng giải đã được xuất ra Excel。`);
         });
         break;
     }
@@ -511,7 +511,7 @@ function selectCard(duration = 600) {
 
   let text = currentLuckys.map(item => item[1]);
   addQipao(
-    `Chúc mừng${text.join("、")}đã nhận được${currentPrize.title}, Khai xuân như ý。`
+    `Chúc mừng ${text.join("、")} đã nhận được ${currentPrize.title}。`
   );
 
   selectedCardIndex.forEach((cardIndex, index) => {
@@ -616,7 +616,7 @@ function lottery() {
   //   btns.lottery.innerHTML = "开始抽奖";
   //   return;
   // }
-  btns.lottery.innerHTML = "Kết thúc quay lì xì";
+  btns.lottery.innerHTML = "Chọn người may mắn";
   rotateBall().then(() => {
     // 将之前的记录置空
     currentLuckys = [];
@@ -798,7 +798,7 @@ function reset() {
   window.AJAX({
     url: "/reset",
     success(data) {
-      console.log("重置成功");
+      console.log("reset successful");
     }
   });
 }
@@ -855,7 +855,7 @@ window.onload = function () {
             animate();
           },
           () => {
-            addQipao("Nhạc nền được phát tự động, vui lòng liên hệ phòng Marketing TSN - Lobico！");
+            addQipao("Phần mềm được tạo bởi phòng Marketing Tân Sơn Nhất dựa trên dự án mã nguồn mở！");
           }
         );
       } else {
