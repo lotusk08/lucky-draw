@@ -193,7 +193,7 @@ button:active {
   justify-content: center;
   border-radius: 4px;
   flex-wrap: nowrap;
-  background-color: rgba(255, 88, 0, 0.21);
+  background-color: rgba(4, 41, 48, 0.32);
   border: 1px solid rgba(0, 135, 255, 0.21);
   color: rgba(255, 255, 255, 1);
   width: 30vh;
@@ -467,7 +467,7 @@ button:active {
 
 .prize-shine {
   font-size: 4vh;
-  color: color(display-p3 0.864 0.194 0.133);
+  color: color(display-p3 1 0.277 0);
   vertical-align: top;
   padding: 0 6px;
 }

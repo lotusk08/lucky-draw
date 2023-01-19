@@ -62,7 +62,7 @@ function loadXML(xmlPath) {
 function writeXML(data, name) {
   let buffer = xlsx.build([
     {
-      name: "抽奖结果",
+      name: "Danh sach trung thuong li xi",
       data: data
     }
   ]);
@@ -96,7 +96,7 @@ function saveDataFile(data) {
         return;
       }
       resolve();
-      console.log("数据写入成功");
+      console.log("Successful data writing");
     });
   });
 }
@@ -118,7 +118,7 @@ function saveErrorDataFile(data) {
         return;
       }
       resolve();
-      console.log("数据写入成功");
+      console.log("Successful data writing");
     });
   });
 }

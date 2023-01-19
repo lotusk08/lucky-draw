@@ -10,41 +10,41 @@ const prizes = [
   {
     type: 0,
     count: 1000,
-    title: "Quà tặng bí mật",
-    text: "Niềm vui nho nhỏ"
+    title: "Quay số vui vẻ",
+    text: "Niềm vui lan toả"
   },
   {
     type: 1,
     count: 1,
-    text: "Mã đáo thành công",
+    text: "Đại hoà đại cát",
     title: "1.000.000",
     img: "../img/lx01.png"
   },
   {
     type: 2,
     count: 5,
-    text: "Tiến xuân Quý Mão",
+    text: "Phúc lộc tề gia",
     title: "500.000",
     img: "../img/lx02.png"
   },
   {
     type: 3,
     count: 30,
-    text: "Nỗi lo tan biến",
+    text: "Thần tài tới nhà",
     title: "200.000",
     img: "../img/lx03.png"
   },
   {
     type: 4,
     count: 90,
-    text: "May mắn to to",
+    text: "May mắn ghé qua",
     title: "100.000",
     img: "../img/lx04.png"
   },
   {
     type: 5,
     count: 142,
-    text: "Niềm vui nho nhỏ",
+    text: "Niềm vui lan toả",
     title: "50.000",
     img: "../img/lx05.png"
   },
