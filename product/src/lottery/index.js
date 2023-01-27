@@ -267,7 +267,7 @@ function bindEvent() {
           // 抽奖
           lottery();
         });
-        addQipao(`Đang tìm người trúng [${currentPrize.title}] tiếp theo!`);
+        addQipao(`Đang quay giải lì xì [${currentPrize.title}]!`);
         break;
       // 重新抽奖
       case "reLottery":
@@ -276,7 +276,7 @@ function bindEvent() {
           return;
         }
         setErrorData(currentLuckys);
-        addQipao(`Đang tìm tìm lại tên của [${currentPrize.title}]`);
+        addQipao(`Đang tìm lại tên của [${currentPrize.title}]`);
         setLotteryStatus(true);
         // 重新抽奖则直接进行抽取，不对上一次的抽奖数据进行保存
         // 抽奖
