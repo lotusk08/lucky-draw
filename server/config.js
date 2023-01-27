@@ -36,7 +36,7 @@ const prizes = [
   },
   {
     type: 4,
-    count: 90,
+    count: 86,
     text: "May mắn ghé qua",
     title: "100.000",
     img: "../img/lx04.png"
