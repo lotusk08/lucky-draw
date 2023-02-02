@@ -11,7 +11,7 @@ const prizes = [
     type: 0,
     count: 1000,
     title: "Quay số vui vẻ",
-    text: "Niềm vui lan toả"
+    text: "Niềm vui nhân ba, chỉ là không có thưởng"
   },
   {
     type: 1,
