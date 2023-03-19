@@ -1,59 +1,94 @@
 /**
- * 奖品设置
- * type: 唯一标识，0是默认特别奖的占位符，其它奖品不可使用
- * count: 奖品数量
- * title: 奖品描述
- * text: 奖品标题
- * img: 图片地址
- */
+Prize setting
+type: Unique identifier, 0 is a placeholder for the default special prize, other prizes cannot use it
+count: Number of prizes
+title: Prize description
+text: Prize title
+img: Image address
+*/
 const prizes = [
   {
-    type: 0,
-    count: 1000,
-    title: "Quay số vui vẻ",
-    text: "Niềm vui nhân ba, chỉ là không có thưởng"
+  type: 0,
+  count: 1000,
+  text: "Quay cho vui thoy",
+  title: "Yamaha - la la la",
   },
   {
     type: 1,
     count: 1,
-    text: "Đại hoà đại cát",
-    title: "1.000.000",
-    img: "../img/lx01.png"
+    text: "Giải đặc biệt",
+    title: "Yamaha Janus",
+    img: "../img/db.png"
   },
   {
     type: 2,
-    count: 5,
-    text: "Phúc lộc tề gia",
-    title: "500.000",
-    img: "../img/lx02.png"
+    count: 1,
+    text: "Giải nhất",
+    title: "iPad 10.2 2021 4G 64GB",
+    img: "../img/01.png"
   },
   {
     type: 3,
-    count: 30,
-    text: "Thần tài tới nhà",
-    title: "200.000",
-    img: "../img/lx03.png"
+    count: 1,
+    text: "Giải nhì 1",
+    title: "Máy lọc không khí Sharp FP-JM30V-B",
+    img: "../img/02.png"
   },
   {
     type: 4,
-    count: 86,
-    text: "May mắn ghé qua",
-    title: "100.000",
-    img: "../img/lx04.png"
+    count: 1,
+    text: "Giải nhì 2",
+    title: "Máy hút bụi Philip FC6721",
+    img: "../img/03.png"
   },
   {
     type: 5,
-    count: 142,
-    text: "Niềm vui lan toả",
-    title: "50.000",
-    img: "../img/lx05.png"
+    count: 1,
+    text: "Giải ba 1",
+    title: "Nồi chiên không dầu Sunhouse 4,5L",
+    img: "../img/04.png"
   },
+  {
+    type: 6,
+    count: 1,
+    text: "Giải ba 2",
+    title: "Lò vi sóng Sharp 23L- R-G372VN-S",
+    img: "../img/05.png"
+  }, 
+  {
+    type: 7,
+    count: 2,
+    text: "Khuyến khích 1",
+    title: "Bàn ủi hơi nước cầm tay Tefal DT3030E0",
+    img: "../img/06.png"
+  },
+  {
+    type: 8,
+    count: 2,
+    text: "Khuyến khích 2",
+    title: "Nồi áp suất Coex CP -3211A",
+    img: "../img/07.png"
+  },
+  {
+    type: 9,
+    count: 3,
+    text: "Khuyến khích 3",
+    title: "Máy xay sinh tố Kangaroo KG4B2",
+    img: "../img/08.png"
+  },
+  {
+    type: 10,
+    count: 3,
+    text: "Khuyến khích 4",
+    title: "Bộ nồi Inox Elmich 2223NK",
+    img: "../img/09.png"
+  },   
 ];
 
 /**
  * 一Set
  */
-const EACH_COUNT = [10, 1, 1, 10, 10, 10];
+const EACH_COUNT = [10, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3];
 
 /**
  * 卡片公司名称标识

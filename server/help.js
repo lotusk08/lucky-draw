@@ -62,7 +62,7 @@ function loadXML(xmlPath) {
 function writeXML(data, name) {
   let buffer = xlsx.build([
     {
-      name: "Danh sach trung thuong li xi",
+      name: "Danh sach trung thuong",
       data: data
     }
   ]);

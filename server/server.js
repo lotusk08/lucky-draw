@@ -144,12 +144,12 @@ router.post("/export", (req, res, next) => {
     outData = outData.concat(luckyData[item.type] || []);
   });
 
-  writeXML(outData, "/Ket qua quay li xi.xlsx")
+  writeXML(outData, "/Ket qua quay lucky draw.xlsx")
     .then(dt => {
       // res.download('/Ket qua quay li xi.xlsx');
       res.status(200).json({
         type: "success",
-        url: "Ket qua quay li xi.xlsx"
+        url: "Ket qua quay lucky draw.xlsx"
       });
       log(`Export data successfully！`);
     })

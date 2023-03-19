@@ -84,7 +84,7 @@ a {
   top: 4.0vh;
   left: 0;
   right: 0;
-  font-size: 1.8vh;
+  font-size: 1.6vh;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.75);
   text-shadow: 0 0 1vh rgba(127, 159, 255, 0.25);
@@ -95,7 +95,7 @@ a {
   bottom: 1.2vh;
   left: 0;
   right: 0;
-  font-size: 1.6vh;
+  font-size: 1.2vh;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -127,7 +127,7 @@ button:active {
 }
 
 .highlight.element .name {
-  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.95);
 }
 
 .prize.element .name {
@@ -196,8 +196,8 @@ button:active {
   background-color: rgba(4, 41, 48, 0.32);
   border: 1px solid rgba(0, 135, 255, 0.21);
   color: rgba(255, 255, 255, 1);
-  width: 30vh;
-  height: 10vh;
+  width: 28vh;
+  height: 9vh;
   box-sizing: border-box;
   transition: transform 1s ease-in;
 }
@@ -205,7 +205,7 @@ button:active {
 .prize-item .prize-img {
   width: 8vh;
   height: 8vh;
-  margin-right: 1.2vh;
+  margin-right: 1.4vh;
   border-radius: 50%;
   background-color: #fff;
   text-shadow: 0 0 1vh rgba(255, 255, 255, 1);
@@ -227,7 +227,7 @@ button:active {
 
 .prize-title {
   margin: 4px 0;
-  font-size: 1.8vh;
+  font-size: 1.4vh;
 }
 
 .prize-count {
@@ -236,7 +236,7 @@ button:active {
 }
 
 .prize-count .progress {
-  height: 1.8vh;
+  height: 1.2vh;
   background: rgba(0, 0, 0, 0.5);
   padding: 1px;
   overflow: visible;
@@ -244,11 +244,11 @@ button:active {
 }
 
 .progress .progress-bar {
-  border-radius: 1.8vh;
+  border-radius: 1.6vh;
   position: relative;
   animation: animate-positive 2s;
   background-color: #ff0000;
-  height: 1.8vh;
+  height: 1.6vh;
   -webkit-transition: width 0.6s ease;
   -o-transition: width 0.6s ease;
   transition: width 0.6s ease;
@@ -455,18 +455,18 @@ button:active {
 
 .shine.prize-item {
   /* width: 24vh; */
-  margin: 1.8vh 0;
+  margin: 1.2vh 0;
 }
 
 .prize-mess {
   color: #fff;
-  line-height: 4vh;
-  font-size: 4vh;
-  margin: 2.4vh 0;
+  line-height: 2vh;
+  font-size: 2vh;
+  margin: 2vh 0;
 }
 
 .prize-shine {
-  font-size: 4vh;
+  font-size: 2vh;
   color: color(display-p3 1 0.277 0);
   vertical-align: top;
   padding: 0 6px;

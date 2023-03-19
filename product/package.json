@@ -9,7 +9,7 @@
     "build": "webpack --mode=production --progress --colors",
     "dev": "webpack-dev-server --config webpack.dev.js --mode=development --progress --colors"
   },
-  "author": "TSN Marketing Department",
+  "author": "Steve Hoàng - stevehoang.com",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.1.0",

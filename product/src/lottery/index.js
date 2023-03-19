@@ -212,7 +212,7 @@ function bindEvent() {
     if (isLotting) {
       if (e.target.id === "lottery") {
         rotateObj.stop();
-        btns.lottery.innerHTML = "Quay lì xì";
+        btns.lottery.innerHTML = "Quay thưởng";
       } else {
         addQipao("May mắn vẫn đang đợi bạn, bình tĩnh!");
       }
@@ -267,7 +267,7 @@ function bindEvent() {
           // 抽奖
           lottery();
         });
-        addQipao(`Đang quay giải lì xì [${currentPrize.title}]!`);
+        addQipao(`Đang quay giải [${currentPrize.title}]!`);
         break;
       // 重新抽奖
       case "reLottery":
@@ -276,7 +276,7 @@ function bindEvent() {
           return;
         }
         setErrorData(currentLuckys);
-        addQipao(`Đang tìm lại tên của [${currentPrize.title}]`);
+        addQipao(`Đang tìm lại chủ nhân của [${currentPrize.title}]`);
         setLotteryStatus(true);
         // 重新抽奖则直接进行抽取，不对上一次的抽奖数据进行保存
         // 抽奖
@@ -855,7 +855,7 @@ window.onload = function () {
             animate();
           },
           () => {
-            addQipao("Phần mềm được tạo bởi phòng Marketing Tân Sơn Nhất dựa trên dự án mã nguồn mở！");
+            addQipao("Phần mềm được hiệu chỉnh bởi stevehoang.com dựa trên dự án mã nguồn mở！");
           }
         );
       } else {
